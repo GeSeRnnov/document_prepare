@@ -1,0 +1,31 @@
+https://www.npmjs.com/package/react-head-tags
+
+
+
+Installation
+
+npm install react-head-tags --save
+
+
+
+Usage
+
+import React from 'react'
+import { renderToNodeStream } from 'react-dom/server'
+import { HeadManager, HeadTags } from 'react-head-tags'
+ 
+let headTags
+const contentStream = renderToNodeStream(
+  <HeadManager
+    onHeadTagsChange={tags => {
+      headTags = tags
+    }}
+  >
+    <HeadTags>
+      <title>Title</title>
+      <meta name="description" content="testing" />
+    </HeadTags>
+  </HeadManager>,
+)
+
+

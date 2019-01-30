@@ -1,0 +1,63 @@
+{
+  "name": "doc-prepare",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "@material-ui/core": "^3.8.1",
+    "@material-ui/styles": "^3.0.0-alpha.7",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-lodash": "^3.3.2",
+    "babel-plugin-react-transform": "^3.0.0",
+    "filepond": "^3.7.4",
+    "filepond-plugin-image-exif-orientation": "^1.0.3",
+    "filepond-plugin-image-preview": "^3.1.6",
+    "react": "16.7.0-alpha.0",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "16.7.0-alpha.0",
+    "react-filepond": "^5.0.0",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-sitemap": "^1.1.5",
+    "react-scripts": "^2.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "homepage": "./",
+    "build": "npm run build:react && npm run build:bundle",
+    "build:react": "react-scripts build",
+    "build:bundle": "webpack --config webpack.config.js",
+    "production": "webpack -p --progress",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "@babel/react",
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "css-loader": "^2.1.0",
+    "react-hot-loader": "^4.6.3",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
